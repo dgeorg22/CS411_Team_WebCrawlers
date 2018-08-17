@@ -1,0 +1,61 @@
+Notes on progress for web scraping portion of project:
+
+3/12/2018
+----------------
+Created initial python code for scraping a wiki page that contains
+a list of north american resorts.  
+
+This code will create a csv file of resort names with their locations
+and prices.
+
+Removed the resorts from Canada out of the list
+
+3/14/2018
+----------------
+Created a python script that is able to crawl through the skiresortsinfo page
+
+TODO: Need to add a scraper for it to extract all the data from each subordinate webpage
+
+3/25/2018
+----------------
+Added test_crawler2.py which has the ability to scrape the resort.info web and grab the resort info from
+the pages.  This does so on a 50 page basis.
+
+TODO:  Need to take the resort-info files and merge them together to form an entire resort page
+that can be loaded to the SQL database.
+
+3/25/2018
+-----------------
+Added weather info to the resort-info table
+
+3/26/2018
+-----------------
+Created a scraper that pulls down all the locations for all resorts in US
+named wikiscraper2.py.  The list is stored in resort3.info
+
+TODO:  Need to merge data from resort2.info with resort3.info and then
+should be able to fill up the database except for the travel info.
+
+3/28/2018
+------------------
+The massager will create all four tables that can be loaded in to the SQL database.  A bit primitive still.
+
+Fixed a bug with endSeasonDate for resort table
+
+3/29/2018
+-------------------
+Added the ability to scrape out the city and state where the resort is located
+
+Added the correct cities and states to the massager
+
+Fixed a bug with reading states
+
+3/31/2018
+--------------------
+Added weatherforecast for entire season -- Note: Some of this data is modeled and not real
+
+Added stay pricing for the entire season as well
+
+4/01/2018
+---------------------
+Added flight schedule for entire season
